@@ -21,6 +21,11 @@
     <ListView
         android:id="@+id/party_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/stuff"/>
+        android:layout_height="match_parent"/>
+    <Button
+        android:id="@+id/updatePartyList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="updatePartyList"
+        android:layout_below="@id/party_listview"/>
 </RelativeLayout>
