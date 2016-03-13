@@ -33,7 +33,24 @@ public class PlaylistFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+
+        View rootView = inflater.inflate(R.layout.fragment_playlist, container, false);
+        Song s = new Song("Billy Joel","Storm Front","We didnt start the fire");
+        Song a = new Song("Guns N' Roses","The Spaghetti Incident","Since I Dont have you");
+        Song c = new Song("American Idiot","American Idiot","GreenDay");
+        mSongArrayList = new ArrayList<Song>();
+        mSongArrayList.add(s);
+
+        mSongArrayList = new ArrayList<>();
+        mSongArrayList.add(s);
+        mSongArrayList.add(a);
+        mSongArrayList.add(c);
+
+        mPlaylistListView = (ListView)rootView.findViewById(R.id.playlist_listview);
+        mSongArrayAdapter = new ArrayAdapter<Song>(getContext(),android.R.layout.simple_list_item_1,mSongArrayList);
+        mPlaylistListView.setAdapter(mSongArrayAdapter);
+        return rootView;
+
     }
 
     public class ScoreAsyncTask extends AsyncTask<String, Void, APIResults> {

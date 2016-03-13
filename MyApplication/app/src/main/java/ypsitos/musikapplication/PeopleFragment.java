@@ -20,11 +20,25 @@ public class PeopleFragment extends Fragment {
     private ArrayAdapter<Person> mAdapter;
 
     public PeopleFragment() {
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View rootView = inflater.inflate(R.layout.fragment_people, container, false);
+        Person p = new Person("Rick","8675309");
+        Person a = new Person("Bob","5555555");
+        Person c = new Person("Bert","1234567");
+
+        arrayList = new ArrayList<>();
+        arrayList.add(p);
+        arrayList.add(a);
+        arrayList.add(c);
+
+        peopleListView = (ListView)rootView.findViewById(R.id.people_listview);
+        mAdapter = new ArrayAdapter<Person>(getContext(),android.R.layout.simple_list_item_1,arrayList);
+        peopleListView.setAdapter(mAdapter);
+        return rootView;
     }
 
 }
