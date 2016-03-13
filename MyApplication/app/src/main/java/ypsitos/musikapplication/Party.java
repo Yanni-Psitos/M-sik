@@ -5,38 +5,17 @@ package ypsitos.musikapplication;
  */
 public class Party {
     private int id;
-    private String type;
-    private String address;
-    private String date;
-    private String time;
+    private String name;
+    private String creator;
 
-    public Party(int id, String type, String address, String date, String time) {
-
+    public Party(int id, String name, String creator) {
         this.id = id;
-        this.type = type;
-        this.address = address;
-        this.date = date;
-        this.time = time;
+        this.name = name;
+        this.creator = creator;
     }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
 
     public int getId() {
+
         return id;
     }
 
@@ -44,19 +23,19 @@ public class Party {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getName() {
+        return name;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCreator() {
+        return creator;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 }
