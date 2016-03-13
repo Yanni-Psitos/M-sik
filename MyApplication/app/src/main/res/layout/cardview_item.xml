@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    android:layout_margin="4dp"
+    app:cardPreventCornerOverlap="true">
+
+    <!--The number of the party-->
+    <TextView
+        android:id="@+id/partyID"
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|left"
+        android:layout_marginLeft="10dp"/>
+
+    <!--The address of the party-->
+    <TextView
+        android:id="@+id/partyAddress"
+        android:text="Your place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="10dp"/>
+
+</android.support.v7.widget.CardView>
