@@ -9,16 +9,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 // Activity that displays all your parties
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayAdapter<Party> mAdapter;
+    private PartyAdapter mAdapter;
     private ListView mListView;
     private ArrayList<Party> mPartyArrayList;
 
@@ -30,12 +28,10 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mListView = (ListView) findViewById(R.id.party_listview);
-        TextView partyID = (TextView) findViewById(R.id.partyID);
-        TextView partyAddress = (TextView) findViewById(R.id.partyAddress);
 
         mPartyArrayList = new ArrayList<>();
 
-        Party party = new Party(1, "master", "123 Street", "3/25", "10:00PM");
+        Party party = new Party(1, "White Tiger Party", "123121324");
         mPartyArrayList.add(party);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -49,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAdapter = new ArrayAdapter<Party>(this, R.layout.cardview_item, mPartyArrayList);
+        mAdapter = new PartyAdapter(MainActivity.this, mPartyArrayList);
 
+
+        mListView.setAdapter(mAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

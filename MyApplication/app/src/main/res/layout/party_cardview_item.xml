@@ -7,12 +7,13 @@
     app:cardCornerRadius="10dp"
     app:cardElevation="4dp"
     android:layout_margin="4dp"
+    android:background="#6e6e6e"
     app:cardPreventCornerOverlap="true">
 
     <!--The number of the party-->
     <TextView
-        android:id="@+id/partyID"
-        android:text="1"
+        android:id="@+id/partyName"
+        android:text="White Tiger Party"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|left"
@@ -20,8 +21,8 @@
 
     <!--The address of the party-->
     <TextView
-        android:id="@+id/partyAddress"
-        android:text="Your place"
+        android:id="@+id/partyCreator"
+        android:text="Bob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|right"
