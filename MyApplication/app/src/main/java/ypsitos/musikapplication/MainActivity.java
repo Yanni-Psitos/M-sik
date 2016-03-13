@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements IHODClientCallbac
     private void CallPrediction() {
         hodApp = HODApps.PREDICT;
         Map<String, Object> params = new HashMap<>();
-        params.put("file", "/Users/David/workspace/ADI/projects/M-sik/MyApplication/app/src/main/res/raw/data.csv");
+        params.put("url", "http://www.qcalendar.com/hptest/data.csv"); // /Users/David/workspace/ADI/projects/M-sik/MyApplication/app/src/main/res/raw/d
         params.put("service_name", "predictpoints");
         hodClient.PostRequest(params, hodApp, HODClient.REQ_MODE.ASYNC);
     }
